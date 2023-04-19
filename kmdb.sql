@@ -198,4 +198,6 @@ SELECT * FROM movies;
 -- The SQL statement for the cast output
 -- TODO!
 SELECT movies.title, actors.name, actors_roles.role_name
-FROM 
+FROM actors_roles 
+INNER JOIN movies ON actors_roles.movies_id = movies.id
+INNER JOIN actors ON actors_roles.actors_id = actors_id;
